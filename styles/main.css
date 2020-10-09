@@ -1,0 +1,63 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+    padding: 8px;
+    margin-right: 4px;
+    display: inline-block;
+}
+
+.logo > svg {
+    width: 40px;
+    height: 40px;
+}
+
+.earth {
+    width: 50%;
+    margin: 5px;
+}
+
+.fb {
+    background-color: #4267B2; 
+}
+
+.ld {
+    background-color: #2867B2; 
+}
+
+.tw {
+    background-color: #1DA1F2; 
+}
+
+.list {
+    list-style: none;
+}
+
+.list-item:before { 
+    content: "";
+    border-color: transparent skyblue;
+    border-style: solid;
+    border-width: 0.25em 0 0.25em 0.45em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -1em;
+    top: 0.9em;
+    position: relative;
+}
+
+.more {
+    text-decoration: underline;
+    color: #007bb5;
+    margin-bottom: 15px;
+}
+
+.more:hover {
+    text-decoration: none;
+    color: #007bb5;
+}
+
+#character-count {
+    margin-bottom: 15px;
+}
