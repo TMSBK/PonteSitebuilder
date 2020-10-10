@@ -1,6 +1,6 @@
 var captions = $(".caption");
 var dots = $(".dot");
-var captionIndex = -1;
+var captionIndex = 0;
 
 function setActiveCaption(index) {
     $(".active-caption").removeClass("active-caption");
@@ -10,12 +10,12 @@ function setActiveCaption(index) {
 }
 
 function rotateCaptions() {
-    ++captionIndex;
     var index = captionIndex % captions.length;
     captions.eq(index)
         .fadeIn(2000, setActiveCaption(index))
         .delay(2000)
         .fadeOut(2000, rotateCaptions);
+    captionIndex++;
 }
 
 function initCaptions() {
