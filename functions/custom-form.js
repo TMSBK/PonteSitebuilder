@@ -3,11 +3,18 @@ var inputs = $(".form-control");
 var messageTextArea = $("#text-input");
 var placeholder = '';
 
-messageTextArea.on("input", function(){
-    var maxLength = $(this).attr("maxlength");
-    var currentLength = $(this).val().length;
-    var remainingCharacters = maxLength - currentLength;
+function remainingCharactersOf(textArea) {
+    var maxLength = $(textArea).attr("maxlength");
+    var currentLength = $(textArea).val().length;
+    return maxLength - currentLength;
+}
+
+function changeTextAreaValueWith(remainingCharacters) {
     characterCount.html("maximum 200 karakter - " + remainingCharacters + " maradt");
+}
+
+messageTextArea.on("input", function(){
+    changeTextAreaValueWith(remainingCharactersOf(this));
 });
 
 function getLabelOf(element) {
