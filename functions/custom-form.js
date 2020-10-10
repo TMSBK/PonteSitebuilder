@@ -10,15 +10,37 @@ messageTextArea.on("input", function(){
     characterCount.html("maximum 200 karakter - " + remainingCharacters + " maradt");
 });
 
+function getLabelOf(element) {
+    return $("label[for='" + $(element).attr('id') + "']");
+}
+
+function hidePlaceholder(element) {
+    $(element).attr('placeholder','');
+}
+
+function storePlaceholderValue(element) {
+    placeholder = $(element).attr('placeholder');
+}
+
+function revealPlaceholder(element) {
+    $(element).attr('placeholder', placeholder);
+}
+
+function hideLabel(element) {
+    getLabelOf(element).css('display','none');
+}
+
+function revealLabel(element) {
+    getLabelOf(element).css('display','block');
+}
+
 inputs.focusin(function() {
-    var label = $("label[for='" + $(this).attr('id') + "']");
-    placeholder = $(this).attr('placeholder');
-    $(this).attr('placeholder','');
-    label.css('display','block');
+    storePlaceholderValue(this)
+    hidePlaceholder(this);
+    revealLabel(this);
 });
 
 inputs.focusout(function() {
-    var label = $("label[for='" + $(this).attr('id') + "']");
-    $(this).attr('placeholder', placeholder);
-    label.css('display','none');
+    revealPlaceholder(this);
+    hideLabel(this);
 });
