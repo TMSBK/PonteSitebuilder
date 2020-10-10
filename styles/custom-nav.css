@@ -39,6 +39,7 @@
 }
 
 .dropdown-item {
+    border-top: 1px solid skyblue;
     padding: 20px;
     color: white;
     background-color: #0093d8;
@@ -91,19 +92,23 @@
     
     .mobile-dropdown > ul {
         list-style-type: none;
+        padding: 0;
     }
 
     .mobile-dropdown-item {
         padding: 20px 10px;
         background-color: #007bb5;
+        border-top: 1px solid skyblue;
     }
 
     .mobile-dropdown-item > .nav-link {
+        padding-left: 40px;
         color: white;
     }
 
     .nav-item {
         background-color: #0093d8;
+        border-top: 1px solid skyblue;
     }
 
     .nav-link {
