@@ -10,9 +10,9 @@ function setActiveCaption(index) {
 }
 
 function rotateCaptions() {
-    var index = captionIndex % captions.length;
-    captions.eq(index)
-        .fadeIn(2000, setActiveCaption(index))
+    var nextCaptionIndex = captionIndex % captions.length;
+    captions.eq(nextCaptionIndex)
+        .fadeIn(2000, setActiveCaption(nextCaptionIndex))
         .delay(2000)
         .fadeOut(2000, rotateCaptions);
     captionIndex++;
