@@ -4,9 +4,9 @@ var messageTextArea = $("#text-input");
 var placeholder = '';
 
 messageTextArea.on("input", function(){
-    var maxlength = $(this).attr("maxlength");
+    var maxLength = $(this).attr("maxlength");
     var currentLength = $(this).val().length;
-    var remainingCharacters = maxlength - currentLength;
+    var remainingCharacters = maxLength - currentLength;
     characterCount.html("maximum 200 karakter - " + remainingCharacters + " maradt");
 });
 
